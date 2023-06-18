@@ -2,14 +2,26 @@ body{
     height: auto;
     margin: 0%;
 }
+header{
+    font-weight: bolder;
+    color: rgb(255,255,255);
+    font-size: x-large;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.685);
+}
 header h1{
-    background-color: rgb(88, 88, 88);
-    margin: 0%;
+    margin: 0%;   
+}
+footer h1{
+    background-color: black;
     padding: 20px;
     text-align: center;
     color: white;
-    position: sticky;
-}
+    font-size: 16px; 
+    position: relative;  
+    bottom: 0%;
+}     
 #navigate{
     position: sticky;
     top: 0%;
@@ -17,7 +29,7 @@ header h1{
 }
 .menu{
     margin: 0%;
-    background-color: gray;
+    background-color: rgb(0,0,0,0.5);
 }
 .menu li a{
     color: white;
@@ -31,10 +43,93 @@ header h1{
 .menu li:hover{
     background-color: rgba(0, 0, 0, 0.7);;
 }
-.menu li:nth-child(2):hover #Dropdown_1,.menu li:nth-child(3):hover #Dropdown_2{
+.product{
+    width: 14%;
+    min-width: 140px;
+    min-height: 180px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 3px;
+    background-color: rgb(243,243,253);
+    box-shadow: 5px 5px 10px gainsboro;
+    padding: 5px;
+}
+.product:hover{
+    width: 15%;
+    height: 185px;
+}
+.product >h4, .product > p{
+    margin: 0%;
+}
+.product > p{
+    color: rgb(43,124,230);
+    font-size: 14px;
+}
+.product img{
+    width: 98%;
+    height: 100px;
+}  
+.product button{
+  width: 100%;
+  background-color: lavender;
+  font-size: 16px;
+  border: 1px solid blue;
+  color: orange;
+  font-weight:bold;
+  border-radius: 5px;
+  }
+  .product button:active{
+    background-color: rgb(250, 234, 230);
+    border: 1px solid rgb(0,255,76);
+  }
+#img_section{
+    margin: 3px;
+    height: 400px;
+    min-height: 300px;
+    text-align: center;
+    background-color: rgb(163,228,228);
+    border: 5px solid steelblue;
+    animation-name: image-change;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+@keyframes image-change{
+    0%{
+        background-image: url(Images/Animation/ani1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+    25%{
+        background-image: url(Images/Animation/ani2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+    50%{
+        background-image: url(Images/Animation/ani3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+    75%{
+        background-image: url(Images/Animation/ani4.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(Images/Animation/ani5.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+}
+.menu li:nth-child(2):hover #medicines, .menu li:nth-child(3):hover #health{
     display: block;
 }
-#Dropdown_1,#Dropdown_2{
+#medicines, #health{
     position: absolute;
     width: auto;
     max-width: 150px;
@@ -43,28 +138,16 @@ header h1{
     background-color: whitesmoke;
     padding: 0%;
 }
-#Dropdown_1 li,#Dropdown_2 li{
-    display: block;
+#medicines li, #health li{
+    display:block;
 }
-#Dropdown_1 li:hover,#Dropdown_2 li:hover{
+#medicines li:hover, #health li:hover{
     background-color: gainsboro;
 }
-#Dropdown_1 li a,#Dropdown_2 li a{
+#medicines li a, #health li a{
     color: steelblue;
     font-size: 16px;
 }
-#covidcare{
-    margin: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    overflow-x: scroll;
-}  
-
-footer h1{
-    background-color: black;
-    margin: 0%;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: small;   
-}     
+.main{
+    padding-left: 20px;
+}
